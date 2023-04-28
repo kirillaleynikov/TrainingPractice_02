@@ -19,13 +19,11 @@ namespace TrainingPractice_02
             InitializeComponent();
             StartPosition = FormStartPosition.CenterScreen;
         }
-
         private void Registration_Load(object sender, EventArgs e)
         {
             textBoxPasswordRegistration.UseSystemPasswordChar = true;
             pictureBox2.Visible = false;
         }
-
         private void buttonRegistration_Click(object sender, EventArgs e)
         {
             if (checkUser())
@@ -55,10 +53,15 @@ namespace TrainingPractice_02
             var passUser = md5.hashPassword(textBoxPasswordRegistration.Text);
             SqlDataAdapter adapter = new SqlDataAdapter();
             DataTable table = new DataTable();
-            string queryString = $"select * from register where login_user = '{loginUser}' and password_user = '{passUser}'";
+            string queryString = $"select * from register where login_user = '{loginUser}'";
             SqlCommand command = new SqlCommand(queryString, dataBase.GetConnection());
             adapter.SelectCommand = command;
             adapter.Fill(table);
+            if (loginUser== "" || passUser == md5.hashPassword(""))
+            {
+                MessageBox.Show("Введите логин или пароль!");
+                return true;
+            }
             if (table.Rows.Count > 0)
             {
                 MessageBox.Show("Пользователь уже существует!");
@@ -69,7 +72,6 @@ namespace TrainingPractice_02
                 return false;
             }
         }
-
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             textBoxPasswordRegistration.UseSystemPasswordChar = true;
