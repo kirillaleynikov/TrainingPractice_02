@@ -39,6 +39,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.labelCounter = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // labelQuestion
@@ -146,11 +148,33 @@
             this.label2.TabIndex = 8;
             this.label2.Text = "Оставшееся время:";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.Location = new System.Drawing.Point(930, 212);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(119, 32);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "Вопрос:";
+            // 
+            // labelCounter
+            // 
+            this.labelCounter.AutoSize = true;
+            this.labelCounter.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelCounter.Location = new System.Drawing.Point(1055, 212);
+            this.labelCounter.Name = "labelCounter";
+            this.labelCounter.Size = new System.Drawing.Size(70, 32);
+            this.labelCounter.TabIndex = 10;
+            this.labelCounter.Text = "1/10";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1200, 450);
+            this.ClientSize = new System.Drawing.Size(1218, 450);
+            this.Controls.Add(this.labelCounter);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.labelResult);
@@ -179,6 +203,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label labelCounter;
     }
 }
 

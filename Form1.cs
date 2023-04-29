@@ -18,7 +18,7 @@ namespace TrainingPractice_02
     {
         int totalSeconds = 0;
         DataBase dataBase = new DataBase();
-
+        int counter = 1;
         string file_name = "t.txt";
         string[,] array;
         int total, kolvoVoprosov, pravilOtvetov, nepravilOtvetov, mark;
@@ -31,6 +31,8 @@ namespace TrainingPractice_02
         }
         private void startTest()
         {
+            label3.Visible = true;
+            labelCounter.Visible = true;
             int minutes = 05;
             int seconds = 00;
             totalSeconds = (minutes * 60) + seconds;
@@ -84,6 +86,8 @@ namespace TrainingPractice_02
 
         private void button1_Click(object sender, EventArgs e)
         {
+            counter++;
+            labelCounter.Text = counter.ToString() + "/10";
             if (kolvoVoprosov < 0)
             {
                 startTest();
@@ -115,6 +119,9 @@ namespace TrainingPractice_02
                 label1.Visible = false;
                 labelQuestion.Text = "Результат теста";
                 button1.Text = "Пройти тест заново";
+                label3.Visible = false;
+                labelCounter.Visible = false;
+                counter = 0;
                 rbTurnOnOrOff();
                 return;
             }

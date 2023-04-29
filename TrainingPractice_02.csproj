@@ -116,5 +116,11 @@
   <ItemGroup>
     <None Include="Resources\e2684ea2157a2423b7463536886837b21.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\free-icon-add-user-992675.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\free-icon-login-square-arrow-button-outline-54874.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
