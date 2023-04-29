@@ -9,7 +9,7 @@ namespace TrainingPractice_02
 {
     class DataBase
     {
-        SqlConnection sqlConnection = new SqlConnection(@"Data Source=LAPTOP-VJAV0JCF;Initial Catalog=users; Integrated Security=True");
+        SqlConnection sqlConnection = new SqlConnection(@"Data Source=C41408\SQLEXPRESS;Initial Catalog=users; Integrated Security=True");
         public void openConnection()
         {
             if (sqlConnection.State == System.Data.ConnectionState.Closed)

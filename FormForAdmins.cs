@@ -127,5 +127,16 @@ namespace TrainingPractice_02
                 DataGridViewRow row = dataGridView1.Rows[selectedRow];
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Правила добавления/изменения/удаления вопросов:\n" +
+            "1. Вопросы должны содержать 1 правильный ответ из 4-х вариантов.\n" +
+            "2. Правильный вариант ответа должен быть на первом месте сразу после вопроса.\n" +
+            "3. В текстовом документе не должно быть отступов.\n" +
+            "4. Перед закрытием файла не забудьте его сохранить (Ctrl + S).");
+            string filename = @"t.txt";
+            System.Diagnostics.Process.Start(filename);
+        }
     }
 }
